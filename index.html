@@ -133,7 +133,8 @@
                             <form id="guestbook-form" class="space-y-4">
                                 <input id="guest-name" type="text" placeholder="Your Name(s)" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500" required>
                                 <textarea id="guest-message" placeholder="Your message..." rows="4" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500" required></textarea>
-                                <button type="submit" class="w-full bg-slate-800 text-white py-3 rounded-lg hover:bg-slate-700 transition-colors duration-300 font-bold">Post Message</button>
+                                <button id="guestbook-submit-btn" type="submit" class="w-full bg-slate-800 text-white py-3 rounded-lg hover:bg-slate-700 transition-colors duration-300 font-bold disabled:bg-slate-400" disabled>Post Message</button>
+                                <p id="guestbook-error" class="text-red-500 text-sm text-center hidden"></p>
                             </form>
                         </div>
                         <!-- Messages Display -->
@@ -195,6 +196,8 @@
         const guestMessageInput = document.getElementById('guest-message');
         const guestbookMessagesContainer = document.getElementById('guestbook-messages');
         const loadingMessages = document.getElementById('loading-messages');
+        const guestbookSubmitBtn = document.getElementById('guestbook-submit-btn');
+        const guestbookError = document.getElementById('guestbook-error');
 
         // --- Firebase Globals ---
         let db, auth;
@@ -253,13 +256,20 @@
         // --- GUESTBOOK (FIREBASE) LOGIC ---
         function setupAuthAndGuestbook() {
             onAuthStateChanged(auth, user => {
-                if (!user) {
+                if (user) {
+                    // User is signed in.
+                    guestbookSubmitBtn.disabled = false;
+                    guestbookSubmitBtn.textContent = 'Post Message';
+                    listenForGuestbookMessages(); 
+                } else {
+                    // User is signed out, try to sign in
+                    guestbookSubmitBtn.disabled = true;
+                    guestbookSubmitBtn.textContent = 'Authenticating...';
                     signInAnonymously(auth).catch(error => {
                         console.error("Anonymous sign-in failed:", error);
+                        guestbookSubmitBtn.textContent = 'Authentication Failed';
                     });
                 }
-                 // Once we have a user (anonymous or not), listen for messages
-                listenForGuestbookMessages();
             });
         }
 
@@ -320,13 +330,17 @@
             e.preventDefault();
             const name = guestNameInput.value.trim();
             const message = guestMessageInput.value.trim();
+            
+            guestbookError.classList.add('hidden'); // Hide previous errors
 
             if (!auth.currentUser) {
-                alert("You must be signed in to post a message. Please refresh the page.");
+                guestbookError.textContent = "Authentication issue. Please refresh and try again.";
+                guestbookError.classList.remove('hidden');
                 return;
             }
             if (name === '' || message === '') {
-                alert("Please fill out both your name and a message.");
+                guestbookError.textContent = "Please fill out both your name and a message.";
+                guestbookError.classList.remove('hidden');
                 return;
             }
             
@@ -342,7 +356,8 @@
                 guestMessageInput.value = '';
             } catch (error) {
                 console.error("Error sending message:", error);
-                alert("There was an error posting your message. Please try again.");
+                guestbookError.textContent = "There was an error posting your message. Please try again.";
+                guestbookError.classList.remove('hidden');
             }
         });
 
