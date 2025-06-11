@@ -133,7 +133,7 @@
                             <form id="guestbook-form" class="space-y-4">
                                 <input id="guest-name" type="text" placeholder="Your Name(s)" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500" required>
                                 <textarea id="guest-message" placeholder="Your message..." rows="4" class="w-full p-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500" required></textarea>
-                                <button id="guestbook-submit-btn" type="submit" class="w-full bg-slate-800 text-white py-3 rounded-lg hover:bg-slate-700 transition-colors duration-300 font-bold disabled:bg-slate-400" disabled>Post Message</button>
+                                <button id="guestbook-submit-btn" type="submit" class="w-full bg-slate-800 text-white py-3 rounded-lg hover:bg-slate-700 transition-colors duration-300 font-bold disabled:bg-slate-400" disabled>Authenticating...</button>
                                 <p id="guestbook-error" class="text-red-500 text-sm text-center hidden"></p>
                             </form>
                         </div>
@@ -257,20 +257,29 @@
         function setupAuthAndGuestbook() {
             onAuthStateChanged(auth, user => {
                 if (user) {
-                    // User is signed in.
+                    // User is signed in and ready.
                     guestbookSubmitBtn.disabled = false;
                     guestbookSubmitBtn.textContent = 'Post Message';
-                    listenForGuestbookMessages(); 
                 } else {
-                    // User is signed out, try to sign in
+                    // If the user state ever becomes null (unlikely for anonymous auth), disable the form.
                     guestbookSubmitBtn.disabled = true;
-                    guestbookSubmitBtn.textContent = 'Authenticating...';
-                    signInAnonymously(auth).catch(error => {
-                        console.error("Anonymous sign-in failed:", error);
-                        guestbookSubmitBtn.textContent = 'Authentication Failed';
-                    });
+                    guestbookSubmitBtn.textContent = 'Authentication Failed';
                 }
             });
+
+            // Attempt to sign in immediately after setting up the listener.
+            // This will trigger the onAuthStateChanged listener above.
+            signInAnonymously(auth)
+                .then(() => {
+                    // Now that we're confident a user will be available, we can start listening for messages.
+                    listenForGuestbookMessages();
+                })
+                .catch(error => {
+                    console.error("Anonymous sign-in failed:", error);
+                    guestbookSubmitBtn.textContent = 'Authentication Failed';
+                    guestbookError.textContent = 'Could not connect to the guestbook service.';
+                    guestbookError.classList.remove('hidden');
+                });
         }
 
         function listenForGuestbookMessages() {
