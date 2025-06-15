@@ -55,12 +55,14 @@
             <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
                 <!-- Text color updated to white -->
                 <div class="font-display text-2xl font-bold text-white">J & D</div>
-                <div class="flex items-center space-x-6 md:space-x-8 text-lg">
-                    <!-- Text and hover colors updated for dark background -->
-                    <a href="#home" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors">Home</a>
-                    <a href="#photos" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors">Photos</a>
-                    <a href="#registry" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors">Registry</a>
-                    <a href="#guestbook" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors">Guestbook</a>
+                <div class="flex items-center space-x-4 md:space-x-6 text-lg overflow-x-auto">
+                    <!-- Navigation links reordered -->
+                    <a href="#home" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Home</a>
+                    <a href="#photos" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Photos</a>
+                    <a href="#registry" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Registry</a>
+                    <a href="#guestbook" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Guestbook</a>
+                    <a href="#schedule" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Schedule</a>
+                    <a href="#local-guide" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Local Guide</a>
                 </div>
             </nav>
         </header>
@@ -71,7 +73,7 @@
                 <div class="mb-12">
                     <h1 class="text-5xl md:text-7xl font-display text-slate-800 mb-4">We're Engaged!</h1>
                     <p class="text-xl text-slate-500 max-w-3xl mx-auto">
-                        We're so excited to share this special time in our lives with you. Welcome to our engagement website, where you can find photos, registry information, and leave us a message!
+                        We're so excited to share this special time in our lives with you. Welcome to our engagement website, where you can find event details, photos, and more.
                     </p>
                 </div>
                 <div class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -80,7 +82,7 @@
                      <div class="h-80 rounded-2xl shadow-xl overflow-hidden"><img src="https://placehold.co/800x1200/a3bffa/ffffff?text=JeanMarie+%26+Demetrios+3" onerror="this.onerror=null;this.src='https://placehold.co/800x1200/cccccc/ffffff?text=Image+Not+Found';" alt="JeanMarie and Demetrios" class="w-full h-full object-cover"></div>
                 </div>
                 <div class="mt-16">
-                    <a href="https://withjoy.com/jeanmarie-and-demetrios/registry" target="_blank" class="inline-block bg-slate-800 text-white text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-700 transition-colors duration-300 shadow-lg">
+                    <a href="#registry" class="inline-block bg-slate-800 text-white text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-700 transition-colors duration-300 shadow-lg">
                         View Our Registry
                     </a>
                 </div>
@@ -89,10 +91,7 @@
             <!-- Photos Section -->
             <section id="photos-section" class="page-section hidden bg-white py-16 md:py-24">
                 <div class="container mx-auto px-6 text-center">
-                    <h2 class="text-4xl md:text-5xl font-display text-slate-800 mb-4">Our Story & Photos</h2>
-                    <p class="text-lg text-slate-500 max-w-3xl mx-auto mb-12">
-                        From our first date to the proposal, here are a few moments from our journey together. We can't wait to create many more memories.
-                    </p>
+                    <h2 class="text-4xl md:text-5xl font-display text-slate-800 mb-4">Our Photos</h2>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <div class="rounded-lg overflow-hidden shadow-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/600x600/a3bffa/ffffff?text=Our+First+Trip" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"></div>
                         <div class="rounded-lg overflow-hidden shadow-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/600x600/a3bffa/ffffff?text=The+Proposal" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"></div>
@@ -100,11 +99,6 @@
                         <div class="rounded-lg overflow-hidden shadow-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/600x600/a3bffa/ffffff?text=Adventures" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"></div>
                         <div class="rounded-lg overflow-hidden shadow-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/600x600/a3bffa/ffffff?text=Just+Us" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"></div>
                         <div class="rounded-lg overflow-hidden shadow-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/600x600/a3bffa/ffffff?text=Celebrations" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"></div>
-                    </div>
-                    <div class="mt-16">
-                        <a href="https://withjoy.com/jeanmarie-and-demetrios/registry" target="_blank" class="inline-block bg-slate-800 text-white text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-700 transition-colors duration-300 shadow-lg">
-                            View Our Registry
-                        </a>
                     </div>
                 </div>
             </section>
@@ -114,7 +108,7 @@
                 <div class="container mx-auto px-6 text-center">
                     <h2 class="text-4xl md:text-5xl font-display text-slate-800 mb-4">Gift Registry</h2>
                     <p class="text-lg text-slate-500 max-w-3xl mx-auto mb-8">
-                        Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we have registered for items we would love to have in our new home.
+                        Your presence is the greatest gift of all. However, if you wish to honor us with a gift, we have registered for items we would love to have in our new home.
                     </p>
                     <a href="https://withjoy.com/jeanmarie-and-demetrios/registry" target="_blank" class="inline-block bg-slate-800 text-white text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-700 transition-colors duration-300 shadow-lg">
                         View Our Registry
@@ -140,19 +134,186 @@
                         <!-- Messages Display -->
                         <div id="guestbook-messages" class="space-y-6 h-[60vh] overflow-y-auto pr-4">
                             <p class="text-slate-500 text-center" id="loading-messages">Loading messages...</p>
-                            <!-- Messages will be injected here by Firebase -->
                         </div>
                     </div>
-                    <div class="mt-16 text-center">
-                        <a href="https://withjoy.com/jeanmarie-and-demetrios/registry" target="_blank" class="inline-block bg-slate-800 text-white text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-700 transition-colors duration-300 shadow-lg">
-                            View Our Registry
-                        </a>
+                </div>
+            </section>
+            
+             <!-- Schedule Section -->
+            <section id="schedule-section" class="page-section hidden py-16 md:py-24 bg-slate-50">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-display text-slate-800 mb-12">Weekend Schedule</h2>
+                    <div class="max-w-3xl mx-auto text-left space-y-8">
+                        <div class="p-6 bg-white rounded-lg shadow-sm">
+                            <h3 class="font-display text-2xl text-slate-700">Welcome Drinks</h3>
+                            <p class="font-semibold text-slate-500">Friday, September 5th, 2025 at 8:00 PM</p>
+                            <p class="mt-2 text-slate-600">Join us for casual drinks to kick off the weekend at The Downtown Bar & Grill. All are welcome!</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-lg shadow-sm">
+                            <h3 class="font-display text-2xl text-slate-700">The Ceremony</h3>
+                            <p class="font-semibold text-slate-500">Saturday, September 6th, 2025 at 4:30 PM</p>
+                            <p class="mt-2 text-slate-600">Our wedding ceremony will be held at St. Sophia's Cathedral. Please arrive a few minutes early to be seated.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-lg shadow-sm">
+                            <h3 class="font-display text-2xl text-slate-700">Cocktails & Reception</h3>
+                            <p class="font-semibold text-slate-500">Saturday, September 6th, 2025 at 6:00 PM</p>
+                            <p class="mt-2 text-slate-600">Immediately following the ceremony, please join us for cocktails, dinner, and dancing at The Grand Ballroom.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Local Guide Section -->
+            <section id="local-guide-section" class="page-section hidden py-16 md:py-24">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl md:text-5xl font-display text-slate-800 text-center mb-12">A Guide to the Area</h2>
+                    <div class="max-w-5xl mx-auto grid md:grid-cols-1 lg:grid-cols-3 gap-10 text-left">
+                        <!-- Restaurants (Peninsula) -->
+                        <div>
+                            <h3 class="font-display text-2xl text-slate-700 mb-4 border-b-2 pb-2">Restaurants (Peninsula)</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Evvia+Estiatorio+Palo+Alto" target="_blank" class="hover:text-slate-500">Evvia Estiatorio</a></h4>
+                                    <p class="text-slate-600">Upscale, lively Greek food in Palo Alto. Reservations are a must.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Kincaid's+Bayhouse+Burlingame" target="_blank" class="hover:text-slate-500">Kincaid's</a></h4>
+                                    <p class="text-slate-600">Classic American steakhouse with beautiful bay views in Burlingame.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Zareen's+Redwood+City" target="_blank" class="hover:text-slate-500">Zareen's</a></h4>
+                                    <p class="text-slate-600">Popular and casual spot for delicious Pakistani/Indian food.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Foreigner+Restaurant+San+Mateo" target="_blank" class="hover:text-slate-500">Foreigner</a></h4>
+                                    <p class="text-slate-600">Modern and very popular brunch spot in San Mateo.</p>
+                                </div>
+                                 <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Pausa+Bar+%26+Cookery+San+Mateo" target="_blank" class="hover:text-slate-500">Pausa Bar & Cookery</a></h4>
+                                    <p class="text-slate-600">Stylish Italian spot for pizza, pasta & more in San Mateo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Restaurants in San Francisco -->
+                        <div>
+                            <h3 class="font-display text-2xl text-slate-700 mb-4 border-b-2 pb-2">Restaurants (San Francisco)</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Souvla+San+Francisco" target="_blank" class="hover:text-slate-500">Souvla</a></h4>
+                                    <p class="text-slate-600">Fast, fine Greek sandwiches, salads, and frozen yogurt.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=La+Taqueria+San+Francisco" target="_blank" class="hover:text-slate-500">La Taqueria</a></h4>
+                                    <p class="text-slate-600">An iconic, no-frills Mission spot for some of the best burritos.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=State+Bird+Provisions+San+Francisco" target="_blank" class="hover:text-slate-500">State Bird Provisions</a></h4>
+                                    <p class="text-slate-600">Unique American small plates served dim-sum style.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Nopa+San+Francisco" target="_blank" class="hover:text-slate-500">Nopa</a></h4>
+                                    <p class="text-slate-600">A beloved SF institution for urban rustic food.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=The+House+San+Francisco" target="_blank" class="hover:text-slate-500">The House</a></h4>
+                                    <p class="text-slate-600">Cozy spot famous for its delicious Asian fusion dishes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Things to Do -->
+                        <div>
+                            <h3 class="font-display text-2xl text-slate-700 mb-4 border-b-2 pb-2">Things To Do</h3>
+                            <div class="space-y-4">
+                               <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Filoli+Historic+House+%26+Garden" target="_blank" class="hover:text-slate-500">Filoli Gardens</a></h4>
+                                    <p class="text-slate-600">Explore a magnificent historic estate and stunning formal gardens.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Golden+Gate+Bridge" target="_blank" class="hover:text-slate-500">Golden Gate Bridge</a></h4>
+                                    <p class="text-slate-600">Walk, bike, or drive across the iconic landmark.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Muir+Woods" target="_blank" class="hover:text-slate-500">Muir Woods</a></h4>
+                                    <p class="text-slate-600">Wander through a beautiful forest of giant redwood trees.</p>
+                                </div>
+                                 <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Sawyer+Camp+Trail" target="_blank" class="hover:text-slate-500">Sawyer Camp Trail</a></h4>
+                                    <p class="text-slate-600">A beautiful, flat 6-mile paved trail for walking or biking.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Central+Park+San+Mateo" target="_blank" class="hover:text-slate-500">Central Park, San Mateo</a></h4>
+                                    <p class="text-slate-600">Features a lovely Japanese Tea Garden, playground, and more.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                         <!-- Hotels -->
+                        <div class="lg:col-span-3 mt-10">
+                            <h3 class="font-display text-3xl text-slate-700 mb-4 border-b-2 pb-2 text-center">Hotel Recommendations</h3>
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                               <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Residence+Inn+San+Francisco+Airport+Millbrae+Station" target="_blank" class="hover:text-slate-500">Residence Inn SFO Millbrae</a></h4>
+                                    <p class="text-slate-600">Great for longer stays with kitchenettes, near SFO/BART.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=The+Westin+San+Francisco+Airport" target="_blank" class="hover:text-slate-500">The Westin SFO</a></h4>
+                                    <p class="text-slate-600">Convenient and comfortable, located in Millbrae near the airport.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+San+Mateo" target="_blank" class="hover:text-slate-500">Hilton Garden Inn San Mateo</a></h4>
+                                    <p class="text-slate-600">A reliable and modern option in San Mateo.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Courtyard+San+Mateo+Foster+City" target="_blank" class="hover:text-slate-500">Courtyard Foster City</a></h4>
+                                    <p class="text-slate-600">Modern hotel with waterfront views in Foster City.</p>
+                                </div>
+                                 <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=The+Stanford+Park+Hotel" target="_blank" class="hover:text-slate-500">Stanford Park Hotel</a></h4>
+                                    <p class="text-slate-600">Upscale and classic hotel located in Menlo Park.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Citrine,+Palo+Alto" target="_blank" class="hover:text-slate-500">Hotel Citrine</a></h4>
+                                    <p class="text-slate-600">A stylish and modern Tribute Portfolio hotel in Palo Alto.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Transportation Section -->
+                        <div class="lg:col-span-3 mt-10">
+                            <h3 class="font-display text-3xl text-slate-700 mb-4 border-b-2 pb-2 text-center">Transportation</h3>
+                            <div class="grid md:grid-cols-3 gap-8 text-left">
+                                <div>
+                                    <h4 class="font-bold">Rideshare & Taxis</h4>
+                                    <p class="text-slate-600">Uber and Lyft are widely available throughout the Bay Area and are a convenient way to get around for shorter trips or to/from the airports.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Rental Cars</h4>
+                                    <p class="text-slate-600">For the most flexibility, you can rent a car from SFO or SJC airports. This is a great option if you plan to explore different parts of the Bay Area.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Public Transportation</h4>
+                                    <p class="text-slate-600">BART connects SFO to the Peninsula, and Caltrain runs from San Francisco down to San Jose, with stops in most cities in between. It's a great option for traveling up and down the peninsula without a car.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
         
         <footer class="bg-slate-800 text-white mt-16 py-8 text-center">
+            <nav class="mb-4">
+                <div class="flex justify-center items-center space-x-4 md:space-x-6 text-lg">
+                    <a href="#home" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Home</a>
+                    <a href="#photos" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Photos</a>
+                    <a href="#registry" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Registry</a>
+                    <a href="#guestbook" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Guestbook</a>
+                    <a href="#schedule" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Schedule</a>
+                    <a href="#local-guide" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Local Guide</a>
+                </div>
+            </nav>
             <p class="font-display text-2xl">JeanMarie & Demetrios</p>
             <p>Counting down the days!</p>
         </footer>
@@ -165,8 +326,6 @@
         import { getFirestore, collection, addDoc, onSnapshot, query, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-        // --- Firebase Configuration ---
-        // This is your personal Firebase config object.
         const firebaseConfig = {
             apiKey: "AIzaSyDs5zdnRX1xU_TDhycw24TdWL34cCRNUWE",
             authDomain: "wedding-site-d94ea.firebaseapp.com",
@@ -177,20 +336,14 @@
             measurementId: "G-SDV1W7E77X"
         };
         
-        // --- CONFIGURATION ---
-        // Change this password to whatever you want
         const SITE_PASSWORD = 'ourday';
-
-        // --- DOM Elements ---
         const passwordModal = document.getElementById('password-modal');
         const passwordForm = document.getElementById('password-form');
         const passwordInput = document.getElementById('password-input');
         const passwordError = document.getElementById('password-error');
         const appContent = document.getElementById('app-content');
-        
         const navLinks = document.querySelectorAll('.nav-link');
         const pageSections = document.querySelectorAll('.page-section');
-        
         const guestbookForm = document.getElementById('guestbook-form');
         const guestNameInput = document.getElementById('guest-name');
         const guestMessageInput = document.getElementById('guest-message');
@@ -198,17 +351,13 @@
         const loadingMessages = document.getElementById('loading-messages');
         const guestbookSubmitBtn = document.getElementById('guestbook-submit-btn');
         const guestbookError = document.getElementById('guestbook-error');
-
-        // --- Firebase Globals ---
         let db, auth;
         
-        // --- PASSWORD PROTECTION LOGIC ---
         passwordForm.addEventListener('submit', (e) => {
             e.preventDefault();
             if (passwordInput.value === SITE_PASSWORD) {
                 passwordModal.style.display = 'none';
                 appContent.style.display = 'block';
-                // Initialize the app after successful login
                 initializeAppLogic();
             } else {
                 passwordError.style.display = 'block';
@@ -216,32 +365,25 @@
             }
         });
 
-        // --- SINGLE PAGE APP NAVIGATION ---
         function handleNavigation() {
             const hash = window.location.hash || '#home';
-            
             navLinks.forEach(link => {
                 link.classList.toggle('active', link.hash === hash);
             });
-
             pageSections.forEach(section => {
                 section.style.display = section.id === `${hash.substring(1)}-section` ? 'block' : 'none';
             });
         }
         
         navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // e.preventDefault(); is not used to allow the hash to change
-                setTimeout(handleNavigation, 0); // Use timeout to ensure hash has changed
+            link.addEventListener('click', () => {
+                setTimeout(handleNavigation, 0);
             });
         });
 
-        // --- MAIN APP INITIALIZATION ---
         function initializeAppLogic() {
-            handleNavigation(); // Set initial page view
+            handleNavigation();
             window.addEventListener('hashchange', handleNavigation);
-
-            // Initialize Firebase
             try {
                 const app = initializeApp(firebaseConfig);
                 db = getFirestore(app);
@@ -253,25 +395,18 @@
             }
         }
 
-        // --- GUESTBOOK (FIREBASE) LOGIC ---
         function setupAuthAndGuestbook() {
             onAuthStateChanged(auth, user => {
                 if (user) {
-                    // User is signed in and ready.
                     guestbookSubmitBtn.disabled = false;
                     guestbookSubmitBtn.textContent = 'Post Message';
                 } else {
-                    // If the user state ever becomes null (unlikely for anonymous auth), disable the form.
                     guestbookSubmitBtn.disabled = true;
                     guestbookSubmitBtn.textContent = 'Authentication Failed';
                 }
             });
-
-            // Attempt to sign in immediately after setting up the listener.
-            // This will trigger the onAuthStateChanged listener above.
             signInAnonymously(auth)
                 .then(() => {
-                    // Now that we're confident a user will be available, we can start listening for messages.
                     listenForGuestbookMessages();
                 })
                 .catch(error => {
@@ -285,16 +420,11 @@
         function listenForGuestbookMessages() {
             const messagesCollection = collection(db, 'guestbook_messages');
             const q = query(messagesCollection);
-
             onSnapshot(q, (snapshot) => {
                 loadingMessages.style.display = 'none';
-                
                 const messages = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-                // Sort messages by timestamp, newest first
                 messages.sort((a, b) => (b.timestamp?.toMillis() || 0) - (a.timestamp?.toMillis() || 0));
-
-                guestbookMessagesContainer.innerHTML = ''; // Clear old messages
-
+                guestbookMessagesContainer.innerHTML = '';
                 if (messages.length === 0) {
                     guestbookMessagesContainer.innerHTML = `<p class="text-center text-slate-500">No messages yet. Be the first to write in our guestbook!</p>`;
                 } else {
@@ -309,29 +439,21 @@
         function renderMessage(msg) {
             const messageDiv = document.createElement('div');
             messageDiv.className = 'bg-slate-50 p-5 rounded-xl shadow-sm';
-
             const messageHeader = document.createElement('div');
             messageHeader.className = 'flex justify-between items-center mb-2';
-
             const nameEl = document.createElement('p');
             nameEl.className = 'font-bold text-slate-700';
             nameEl.textContent = msg.name || 'Anonymous';
-
             const dateEl = document.createElement('p');
             dateEl.className = 'text-xs text-slate-400';
             dateEl.textContent = msg.timestamp ? new Date(msg.timestamp.toDate()).toLocaleString() : '';
-
             messageHeader.appendChild(nameEl);
             messageHeader.appendChild(dateEl);
-
             const messageText = document.createElement('p');
             messageText.className = 'text-slate-600';
-            // Simple sanitization to prevent HTML injection
             messageText.textContent = msg.message || '';
-
             messageDiv.appendChild(messageHeader);
             messageDiv.appendChild(messageText);
-
             guestbookMessagesContainer.appendChild(messageDiv);
         }
 
@@ -339,9 +461,7 @@
             e.preventDefault();
             const name = guestNameInput.value.trim();
             const message = guestMessageInput.value.trim();
-            
-            guestbookError.classList.add('hidden'); // Hide previous errors
-
+            guestbookError.classList.add('hidden');
             if (!auth.currentUser) {
                 guestbookError.textContent = "Authentication issue. Please refresh and try again.";
                 guestbookError.classList.remove('hidden');
@@ -352,7 +472,6 @@
                 guestbookError.classList.remove('hidden');
                 return;
             }
-            
             try {
                 const messagesCollection = collection(db, 'guestbook_messages');
                 await addDoc(messagesCollection, {
@@ -369,7 +488,6 @@
                 guestbookError.classList.remove('hidden');
             }
         });
-
     </script>
 </body>
 </html>
