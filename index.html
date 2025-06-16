@@ -33,32 +33,25 @@
 </head>
 <body class="bg-slate-50 text-slate-700">
 
-    <!-- Password Protection Modal -->
     <div id="password-modal" class="fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center z-50">
         <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full text-center">
             <h2 class="text-3xl font-display mb-2">JeanMarie & Demetrios</h2>
             <p class="text-slate-500 mb-6">Please enter the password to view our site.</p>
             <form id="password-form">
-                <!-- Accent color updated to slate -->
                 <input id="password-input" type="password" class="w-full p-3 border border-slate-300 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-slate-500" placeholder="Password">
                 <p id="password-error" class="text-red-500 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
-                <!-- Button color updated to slate -->
                 <button type="submit" class="w-full mt-4 bg-slate-800 text-white py-3 rounded-lg hover:bg-slate-700 transition-colors duration-300 font-bold">Enter</button>
             </form>
         </div>
     </div>
 
-    <!-- Main App Content (hidden until password is correct) -->
     <div id="app-content" class="hidden">
-        <!-- Header updated to match footer -->
         <header class="bg-slate-800 shadow-md sticky top-0 z-40">
             <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <!-- Logo Added -->
                 <div>
                     <img src="https://placehold.co/150x50/transparent/F472B6?text=J+%2B+D&font=great-vibes" alt="J + D Logo" class="h-12 -ml-2">
                 </div>
                 <div class="flex items-center space-x-4 md:space-x-6 text-lg overflow-x-auto">
-                    <!-- Navigation links reordered -->
                     <a href="#home" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Home</a>
                     <a href="#photos" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Photos</a>
                     <a href="#registry" class="nav-link text-slate-300 hover:text-white border-b-2 border-transparent transition-colors whitespace-nowrap">Registry</a>
@@ -70,7 +63,6 @@
         </header>
 
         <main>
-            <!-- Home Section -->
             <section id="home-section" class="page-section container mx-auto px-6 py-16 md:py-24 text-center">
                 <div class="mb-12">
                     <h1 class="text-5xl md:text-7xl font-display text-slate-800 mb-4">We're Engaged!</h1>
@@ -78,25 +70,27 @@
                         We're so excited to share this special time in our lives with you. Welcome to our engagement website, where you can find event details, photos, and more.
                     </p>
                 </div>
+                <div class="mb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                     <a href="https://withjoy.com/jeanmarie-and-demetrios/rsvp" target="_blank" class="inline-block bg-white text-slate-800 border border-slate-800 font-bold py-3 px-6 rounded-lg hover:bg-slate-100 transition-colors duration-300 shadow-lg">
+                        RSVP
+                    </a>
+                    <a href="#schedule" class="inline-block bg-white text-slate-800 border border-slate-800 font-bold py-3 px-6 rounded-lg hover:bg-slate-100 transition-colors duration-300 shadow-lg">
+                        View the Schedule
+                    </a>
+                     <a href="#guestbook" class="inline-block bg-white text-slate-800 border border-slate-800 font-bold py-3 px-6 rounded-lg hover:bg-slate-100 transition-colors duration-300 shadow-lg">
+                        Sign Our Guestbook
+                    </a>
+                    <a href="https://withjoy.com/jeanmarie-and-demetrios/registry" target="_blank" class="inline-block bg-white text-slate-800 border border-slate-800 font-bold py-3 px-6 rounded-lg hover:bg-slate-100 transition-colors duration-300 shadow-lg">
+                        View Our Registry
+                    </a>
+                </div>
                 <div class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
                      <div class="h-80 rounded-2xl shadow-xl overflow-hidden"><img src="https://i.imgur.com/1jFnQ4S.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/800x1200/cccccc/ffffff?text=Image+Not+Found';" alt="JeanMarie and Demetrios" class="w-full h-full object-cover"></div>
                      <div class="h-80 rounded-2xl shadow-xl overflow-hidden"><img src="https://i.imgur.com/2ZhNraw.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/800x1200/cccccc/ffffff?text=Image+Not+Found';" alt="JeanMarie and Demetrios" class="w-full h-full object-cover"></div>
                      <div class="h-80 rounded-2xl shadow-xl overflow-hidden"><img src="https://i.imgur.com/fF7AFT5.jpeg" onerror="this.onerror=null;this.src='https://placehold.co/800x1200/cccccc/ffffff?text=Image+Not+Found';" alt="JeanMarie and Demetrios" class="w-full h-full object-cover"></div>
                 </div>
-                <div class="mt-16 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-                    <a href="#guestbook" class="inline-block bg-white text-slate-800 border border-slate-800 text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-100 transition-colors duration-300 shadow-lg">
-                        Sign Our Guestbook
-                    </a>
-                    <a href="#registry" class="inline-block bg-slate-800 text-white text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-700 transition-colors duration-300 shadow-lg">
-                        View Our Registry
-                    </a>
-                     <a href="#schedule" class="inline-block bg-white text-slate-800 border border-slate-800 text-xl font-bold py-4 px-10 rounded-lg hover:bg-slate-100 transition-colors duration-300 shadow-lg">
-                        View the Schedule
-                    </a>
-                </div>
             </section>
             
-            <!-- Photos Section -->
             <section id="photos-section" class="page-section hidden bg-white py-16 md:py-24">
                 <div class="container mx-auto px-6 text-center">
                     <h2 class="text-4xl md:text-5xl font-display text-slate-800 mb-4">Our Photos</h2>
@@ -111,7 +105,6 @@
                 </div>
             </section>
 
-            <!-- Registry Section -->
             <section id="registry-section" class="page-section hidden py-16 md:py-24">
                 <div class="container mx-auto px-6 text-center">
                     <p class="text-lg text-slate-500 max-w-3xl mx-auto mb-8">
@@ -123,12 +116,10 @@
                 </div>
             </section>
 
-            <!-- Guestbook / Message Board Section -->
             <section id="guestbook-section" class="page-section hidden bg-white py-16 md:py-24">
                 <div class="container mx-auto px-6">
                     <h2 class="text-4xl md:text-5xl font-display text-slate-800 text-center mb-12">Guestbook</h2>
                     <div class="max-w-3xl mx-auto">
-                        <!-- Message Form -->
                         <div class="bg-slate-100 p-6 rounded-2xl mb-8 shadow-inner">
                             <h3 class="text-2xl font-display mb-4">Leave us a message!</h3>
                             <form id="guestbook-form" class="space-y-4">
@@ -138,7 +129,6 @@
                                 <p id="guestbook-error" class="text-red-500 text-sm text-center hidden"></p>
                             </form>
                         </div>
-                        <!-- Messages Display -->
                         <div id="guestbook-messages" class="space-y-6 h-[60vh] overflow-y-auto pr-4">
                             <p class="text-slate-500 text-center" id="loading-messages">Loading messages...</p>
                         </div>
@@ -146,8 +136,7 @@
                 </div>
             </section>
             
-             <!-- Schedule Section -->
-            <section id="schedule-section" class="page-section hidden py-16 md:py-24 bg-slate-50">
+             <section id="schedule-section" class="page-section hidden py-16 md:py-24 bg-slate-50">
                 <div class="container mx-auto px-6 text-center">
                     <h2 class="text-4xl md:text-5xl font-display text-slate-800 mb-12">Weekend Schedule</h2>
                     <div class="max-w-3xl mx-auto text-left space-y-8">
@@ -170,12 +159,10 @@
                 </div>
             </section>
 
-            <!-- Local Guide Section -->
             <section id="local-guide-section" class="page-section hidden py-16 md:py-24">
                 <div class="container mx-auto px-6">
                     <h2 class="text-4xl md:text-5xl font-display text-slate-800 text-center mb-12">A Guide to the Area</h2>
                     <div class="max-w-5xl mx-auto grid md:grid-cols-1 lg:grid-cols-3 gap-10 text-left">
-                        <!-- Restaurants (Peninsula) -->
                         <div>
                             <h3 class="font-display text-2xl text-slate-700 mb-4 border-b-2 pb-2">Restaurants (Peninsula)</h3>
                             <div class="space-y-4">
@@ -202,7 +189,6 @@
                             </div>
                         </div>
 
-                        <!-- Restaurants in San Francisco -->
                         <div>
                             <h3 class="font-display text-2xl text-slate-700 mb-4 border-b-2 pb-2">Restaurants (San Francisco)</h3>
                             <div class="space-y-4">
@@ -229,7 +215,6 @@
                             </div>
                         </div>
 
-                        <!-- Things to Do -->
                         <div>
                             <h3 class="font-display text-2xl text-slate-700 mb-4 border-b-2 pb-2">Things To Do</h3>
                             <div class="space-y-4">
@@ -256,8 +241,7 @@
                             </div>
                         </div>
                         
-                         <!-- Hotels -->
-                        <div class="lg:col-span-3 mt-10">
+                         <div class="lg:col-span-3 mt-10">
                             <h3 class="font-display text-3xl text-slate-700 mb-4 border-b-2 pb-2 text-center">Hotel Recommendations</h3>
                             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                                <div>
@@ -287,7 +271,6 @@
                             </div>
                         </div>
 
-                        <!-- Transportation Section -->
                         <div class="lg:col-span-3 mt-10">
                             <h3 class="font-display text-3xl text-slate-700 mb-4 border-b-2 pb-2 text-center">Transportation</h3>
                             <div class="grid md:grid-cols-3 gap-8 text-left">
